@@ -1,0 +1,329 @@
+:root {
+    --white: #fff;
+    --black: #121725;
+    --lightGrey: #C2CBE5;
+    --grey: #5A668A;
+    --darkGrey: #2C344B;
+    --lightGreen: #54E6AF;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Chivo', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--black);
+}
+body::after {
+    content: "";
+    background: url(./assets/desktop/bg-pattern-dots.svg);
+    position: absolute;
+    height: 104px;
+    width: 232px;
+    right: 0;
+    bottom: calc(50% - 372px);
+}
+.wrapper {
+    width: 100%;
+    height: 640px;
+    margin-left: 165px;
+    background: url('assets/desktop/image-host.jpg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+.wrapper::before {
+    content: "";
+    display: block;
+    background: url("assets/desktop/logo.svg");
+    width: 134.85px;
+    height: 56px;
+    position: absolute;
+    top: -28px;
+}
+.access {
+    width: 723px;
+    min-height: 509px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--black);
+}
+.content h1 {
+    font-size: 52px;
+    line-height: 62px;
+    font-weight: 300;
+    color: var(--lightGreen);
+    margin: 88px 20px 0 0;
+    text-transform: uppercase;
+}
+.content span {
+    display: inline-block;
+    font-size: 52px;
+    line-height: 62px;
+    font-weight: 300;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+.content p {
+    color: var(--lightGrey);
+    margin: 0 278px 40px 0;
+    font-weight: 300;
+}
+form {
+    position: relative;
+    display: inline-block;
+}
+  form input {
+    width: 427px;
+    background-color: var(--darkGrey);
+    padding: 14px 0 14px 32px;
+    border-radius: 30px;
+    border: none;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    font-family: 'Chivo', sans-serif;
+}
+::placeholder{
+    color: var(--white);
+    opacity: 0.5;
+}
+ form button {
+    padding: 9px 27px;
+    background-color: var(--lightGreen);
+    color: var(--black);
+    font-size: 14px;
+    font-style: normal;
+    line-height: 28px;
+    font-weight: 700;
+    font-family: 'Chivo', sans-serif;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+form input:focus {
+   outline: none;
+}
+
+
+form button:hover {
+    background-color: #B3FFE2;
+    cursor: pointer;
+}
+.error {
+    margin: 8px 0 0 32px;
+    color: #FB3E3E;
+    font-size: 12px;
+    line-height: 14.28px;
+    font-weight: 400;
+    display: none;
+}
+
+
+.socials {
+    max-width: 536px;
+    margin-top: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.spotify {
+    margin-right: 40px;
+}
+.apple {
+    margin-right: 41px;
+}
+.google {
+    margin-right: 27px;
+    height: 18px;
+}
+.pocket {
+    height: 26px;
+}
+@media screen and (max-width:1300px) {
+    .wrapper {
+        width: 100%;
+        margin-left: 80px;
+    }
+    .access {
+        max-width: 635px;
+        width: 88vw;
+    }
+    .content {
+        margin-top: 93px;
+    }
+    .content h1, .content span {
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 0;
+    }
+    .content p {
+        margin: 31px 190px 40px 0;
+    }
+}
+@media screen and (max-width:968px) {
+    body {
+        align-items: flex-start;
+    }
+    .wrapper {
+        margin-left: 39px;
+        height: 767px;
+        background: url("./assets/tablet/image-host.jpg");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    .wrapper::before {
+        top: 50px;
+    }
+    body::after {
+        bottom: 0;
+        left: 30px;
+    }
+    .socials {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 20px;
+    }
+}
+@media screen and (max-width:620px) {
+    .wrapper::before {
+        top: 40px;
+    }
+    .socials {
+        padding-bottom: 30px;
+    }
+    body:after {
+        display: none;
+    }
+    .content p {
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width:500px) {
+    .wrapper {
+        margin-left: 0;
+    }
+
+    .wrapper::before {
+        margin: 0;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 62px;
+        top: 0;
+        z-index: 1;
+    }
+    
+    form input {
+        display: block;
+        position: relative;
+        width: 80vw;
+        margin-bottom: 16px;
+        font-size: 14px;
+    }
+    form button {
+        right: 0;
+        top: 0;
+        padding: 14px 27px;
+        display: block;
+        position: relative;
+        width: 80vw;
+        font-size: 14px;
+    }
+    .access {
+        width: 100%;
+        padding: 0 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        top: 0;
+        background-color: rgba(18, 23, 37, 0.9);
+    }
+
+    .content h1 {
+        margin-top: 50px;
+        font-size: 38px;
+        line-height: 46px;
+    }
+    .content span {
+        font-size: 38px;
+        line-height: 46px;
+    }
+    
+}
+@media screen and (max-width: 375px) {
+    .wrapper {
+        background: url("./assets/mobile/image-host.jpg");
+        background-repeat: no-repeat;
+    }
+    
+    .access {
+        background-color: rgba(18, 23, 37, 0.9);
+        padding: 0 24px;
+    }
+    .content {
+        margin-top: 175px;
+    }
+    .content h1, .content span {
+        font-size: 26px;
+        line-height: 38px;
+        margin: 0;
+    }
+    .content p {
+        font-size: 15px;
+        line-height: 25px;
+        margin: 16px 0 33px 0;
+    }    
+    form input {
+        padding: 9px 0 9px 32px;
+        width: 90vw;
+        max-width: 327px;
+    }
+    form button {
+        width: 90vw;
+        max-width: 327px;
+        padding: 9px 0;
+    }
+    .socials {
+        flex-wrap: nowrap;
+    }
+    .spotify {
+        width: 56px;
+        height: 17px;
+        margin-right: 23px;
+    }
+    .apple {
+        width: 45px;
+        height: 17px;
+        margin-right: 20px;
+    }
+    .google {
+        width: 73px;
+        height: 11px;
+        margin-right: 16px;
+    }
+    .pocket {
+        width: 77px;
+        height: 15px;
+    }
+
+}
+@media screen and (max-height: 890px) {
+    body::after {
+        display: none;
+    }
+}

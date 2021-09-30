@@ -262,6 +262,9 @@ form button:hover {
         top: 0;
         background-color: rgba(18, 23, 37, 0.9);
     }
+    .content {
+        order: 1;
+    }
     .content h1 {
         margin-top: 50px;
         font-size: 38px;
@@ -274,6 +277,9 @@ form button:hover {
     .socials {
         transform-origin: left center;
         transform: scale(1);
+        order: 2;
+        margin-top: 33px;
+        padding-bottom: 48px;
     }
     .spotify {
         width: 56px;
@@ -294,6 +300,9 @@ form button:hover {
         width: 77px;
         height: 15px;
     }
+    .email {
+        order: 3;
+    }
 }
 @media screen and (max-width: 375px) {
     .wrapper {
@@ -301,6 +310,7 @@ form button:hover {
         background-repeat: no-repeat;
         background-size: cover;
     }
+   
     .access {
         background-color: rgba(18, 23, 37, 0.9);
         padding: 0 24px;
